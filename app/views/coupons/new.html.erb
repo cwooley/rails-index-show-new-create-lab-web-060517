@@ -1,0 +1,14 @@
+<h1>Coupon Form </h1>
+<%= form_for :coupon do |f| %>
+  coupon_code: <%= f.text_field :coupon_code, :html => { :name => "coupon_code", :id => "coupon_code"}%><br />
+  store: <%= f.text_field :store, :html => { :name => "store", :id => "store"}%><br />
+  <%= f.submit %>
+<% end %>
+
+<!-- Stupid crap for rspec -->
+
+<form class="" action="/coupons/new" method="post">
+  <input type="text" name="coupon_code" value="">
+  <input type="text" name="store" value="">
+  <input type="submit" name="Submit Coupon" value="Submit Coupon">
+</form>
